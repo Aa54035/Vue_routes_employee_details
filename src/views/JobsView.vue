@@ -13,7 +13,14 @@
       <tbody>
         <tr v-for="items in Employee" :key="items.id" class="tableRow">
           <td>{{ items.id }}</td>
-          <td>{{ items.title }}</td>
+          <nav>
+            <router-link 
+            :to="{name:'JobsDetails', params:{id:items.id ,title:items.title,
+            address:items.Address}}">
+              <td>{{ items.title }}</td>
+            </router-link>
+          </nav>
+ 
           <td>{{ items.Address }}</td>
           <td>{{ items.Salary }}</td>
         </tr>
@@ -23,6 +30,8 @@
 </template>
 
 <script>
+//import JobsDetails from '../views/jobsFolder/JobsDetails.vue'
+
 export default {
   data() {
     return {
@@ -48,4 +57,26 @@ export default {
   color: black;
   border: 1px solid blue;
 }
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  border-radius: 5px;
+  padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+nav a:hover {
+  color: white;
+  background: #1ec78f;
+    text-decoration: underline;
+
+}
+
 </style>
