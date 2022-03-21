@@ -1,0 +1,34 @@
+{
+    "Employee": [
+        {
+            "id": 100,
+            "title": "Software developer",
+            "Address": "pune",
+            "Salary": 1000
+        },
+        {
+            "id": 200,
+            "title": "Software architect",
+            "Address": "Goa",
+            "Salary": 2000
+        },
+        {
+            "id": 300,
+            "title": "Business Analyst",
+            "Address": "Bombay",
+            "Salary": 3000
+        },
+        {
+            "id": 400,
+            "title": "Scrum master",
+            "Address": "Delhi",
+            "Salary": 4000
+        },
+        {
+            "id": 500,
+            "title": "Tester",
+            "Address": "Hyd",
+            "Salary": 3500
+        }
+    ]
+}

@@ -36,14 +36,20 @@ export default {
   data() {
     return {
       Employee: [
-        { id: 100, title: "Software developer", Address: "pune", Salary: 1000 },
-        { id: 200, title: "Software architect", Address: "Goa", Salary: 2000 },
-        { id: 300, title: "Business Analyst", Address: "Bombay", Salary: 3000 },
-        { id: 400, title: "Scrum master", Address: "Delhi", Salary: 4000 },
-      ],
-    };
+        // { id: 100, title: "Software developer", Address: "pune", Salary: 1000 },
+        // { id: 200, title: "Software architect", Address: "Goa", Salary: 2000 },
+        // { id: 300, title: "Business Analyst", Address: "Bombay", Salary: 3000 },
+        // { id: 400, title: "Scrum master", Address: "Delhi", Salary: 4000 },
+      ]
+    }
   },
-};
+  mounted(){
+      fetch('http://localhost:3000/employee')
+      .then(res =>res.json())
+      .then(data => this.Employee = data  )
+      .catch(error => console.log('Error received '+error ))
+  }
+}
 </script>
 
 <style>
